@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../styles/produto.css">
+  <title>Listagem de Produtos</title>
+</head>
+
+<body>
+
+  <div class="header">
+    <nav class="navbar navbar-dark navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>KByte</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Produto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Fornecedor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Cliente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Categoria</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="listagem">
+      <h1 class="mb-4">Produtos</h1>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Vendedor</th>
+                <th scope="col">Fornecedor</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>GTX 1050TI</td>
+                <td>Kabum</td>
+                <td>Teste Fornecedor</td>
+                <td><form action=""><button class="btn btn-info">Editar</button></form></td>
+                <td><form action=""><button class="btn btn-danger">Excluir</button></form></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>PC Gamer RTX3080</td>
+                <td>Kabum</td>
+                <td>Fornecedor</td>
+                <td><form action=""><button class="btn btn-info">Editar</button></form></td>
+                <td><form action=""><button class="btn btn-danger">Excluir</button></form></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Headset JBL</td>
+                <td>Terabyte</td>
+                <td>Fornecedor 2</td>
+                <td><form action=""><button class="btn btn-info">Editar</button></form></td>
+                <td><form action=""><button class="btn btn-danger">Excluir</button></form></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+
+</body>
+
+</html>

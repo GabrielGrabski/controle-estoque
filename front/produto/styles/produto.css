@@ -1,3 +1,24 @@
 .header {
     background-color: #189bff;
 }
+
+.cadastro {
+    margin: 5rem 10rem;
+    width: 30vw;
+}
+
+.listagem {
+    margin: 5rem 10rem;
+    width: 50vw;
+}
+
+.btn-cadastrar {
+    background-color: #189bff;
+    color: #fff;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
