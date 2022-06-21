@@ -1,0 +1,27 @@
+.card{
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.principal{
+    margin: 10% 0 5% 0;
+}
+
+.form-control{
+    margin-bottom: 15px;
+}
+
+.form-control:nth-last-child(){
+    margin: none;
+}
+
+.btn .btn-primary{
+    display: flex;
+    justify-content: center;
+}
