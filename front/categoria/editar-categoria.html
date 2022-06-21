@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <title>Categoria</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-dark navbar-expand-lg"
+      style="background-color: #189bff"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <strong>KByte</strong></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Produto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="fornecedor.html">Fornecedor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Cliente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="categoria.html">Categoria</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <main>
+            <h1 class="principal">Editar Categoria</h1>
+            <section class="lista">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Código</th>
+                    <th scope="col">Lorem</th>
+                    <th scope="col">Lorem</th>
+                    <th scope="col">Lorem</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Excluir</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Lorem, ipsum dolor</td>
+                    <td>Lorem, ipsum dolor</td>
+                    <td>Lorem, ipsum dolor</td>
+                    <td>Lorem, ipsum dolor</td>
+                    <td>
+                      <button
+                        type="button"
+                        data-bs-toggle="modal" data-bs-target="#myModal"
+                        class="btn btn-success"
+                      >
+                        Editar
+                      </button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger">
+                        Excluir
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button type="button" class="btn btn-success">
+                        Editar
+                      </button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger">
+                        Excluir
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button type="button" class="btn btn-success">
+                        Editar
+                      </button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger">
+                        Excluir
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="location.href='index.html'"
+              >
+                Novo
+              </button>
+            </section>
+          </main>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Editar</h3>
+                        <button type="button" class="btn-close" data-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label required">Nome do Produto</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label required">Lorem ipsum</label>
+                                <input type="email" class="form-control">
+                            </div>
+                           
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Editar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="myModal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#myModal").modal('show');
+        });
+    </script>
+
+  </body>
+</html>
