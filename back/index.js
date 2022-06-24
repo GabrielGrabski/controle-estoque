@@ -1,4 +1,4 @@
-const customExpress = require('./config/customExpress')
+const customExpress = require('./config/custemExpress')
 const conexao = require('./infra/conexao')
 const DB = require('./infra/db')
 const app = customExpress()
