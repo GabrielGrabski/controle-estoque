@@ -2,10 +2,10 @@ class DB {
 
     init(conexao){
         this.conexao = conexao
-        this.gerarFornecedor()        
+        this.gerarCategoria()        
     }
 
-    gerarFornecedor(){
+    gerarCategoria(){
         let sql = 'CREATE TABLE IF NOT EXISTS fornecedor'+
         '(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,'+
         'nomeProduto VARCHAR(200) NOT NULL,'+   
