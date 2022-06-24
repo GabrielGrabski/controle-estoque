@@ -24,7 +24,7 @@ class Categoria {
         })
     }
 
-    listaCategoria(res){
+    listarCategoria(res){
         const sql = 'SELECT * FROM categoria'
         conexao.query(sql,(erro, resultado) => {
             if(erro) {

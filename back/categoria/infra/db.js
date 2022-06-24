@@ -6,9 +6,9 @@ class DB {
     }
 
     gerarCategoria(){
-        let sql = 'CREATE TABLE IF NOT EXISTS fornecedor'+
+        let sql = 'CREATE TABLE IF NOT EXISTS categoria'+
         '(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,'+
-        'nomeProduto VARCHAR(200) NOT NULL,'+   
+        'categoria VARCHAR(200) NOT NULL,'+   
         this.conexao.query(sql, erro => {
             if(erro){
                 console.log(erro)
