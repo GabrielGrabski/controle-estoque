@@ -46,8 +46,17 @@
                     <section class="formulario">
                         <form method="get" 
                         class="row g-3" 
-                        onsubmit="adicionaFornecedor()"
-                        action="lista.html">
+                        onsubmit="listaFornecedor()"
+                        >
+                        <div class="col-md-12">
+                            <label for="nome" class="form-label">ID Fornecedor</label>
+                            <input type="text" 
+                            class="form-control" 
+                            id="id" 
+                            placeholder="ID" 
+                            maxlength="100"
+                            disabled>
+                        </div>
                             <div class="col-md-6">
                                 <label for="nome" class="form-label">Fornecedor</label>
                                 <input type="text" 
@@ -64,59 +73,10 @@
                                 id="cnpj" 
                                 placeholder="00.000.000/0000-00"
                                 pattern="[0-9]{2}[0-9]{3}[0-9]{3}[0-9]{4}[0-9]{2}">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="telefone" class="form-label">Telefone</label>
-                                <input type="text" 
-                                class="form-control" 
-                                id="telefone" 
-                                placeholder="(00)00000-0000"
-                                pattern="[1-9]{2}[0-9]{4,5}[0-9]{4}">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="cep"class="form-label">CEP</label>
-                                <input type="text" 
-                                class="form-control" 
-                                id="cep"
-                                size="10"
-                                maxlength="9" 
-                                onblur="pesquisacep(this.value);"
-                                placeholder="CEP">
-                            </div>
-                            <div class="mb-2">
-                                <label for="endereco" class="form-label">Endereco</label>
-                                <input type="text" 
-                                class="form-control" 
-                                id="rua" 
-                                size="60"
-                                placeholder="Endereco"
-                                >
-                            </div>
-                            <div class="mb-2">
-                                <label for="bairro" class="form-label">Bairro</label>
-                                <input type="text" 
-                                class="form-control" 
-                                id="bairro" 
-                                size="40"
-                                placeholder="Bairro">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="cidade" class="form-label">Cidade</label>
-                                <input type="text" 
-                                class="form-control" 
-                                id="cidade" 
-                                placeholder="Cidade">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="uf" class="form-label">UF</label>
-                                <input type="text" 
-                                class="form-control" 
-                                id="uf" 
-                                size="2"
-                                placeholder="UF">
-                            </div>       
+                            </div>                                 
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                <button type="submit" class="btn btn-danger">Excluir</button>
+                                <button type="button" class="btn btn-warning" onclick="location.href='lista.html'">Cancelar</button>                                
                             </div> 
                         </form>
                     </section>
@@ -127,5 +87,4 @@
     </div>    
     <script src="../../back/cadastro/model/fornecedor.js"></script>
 </body>
-
 </html>

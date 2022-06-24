@@ -46,8 +46,8 @@
                     <section class="formulario">
                         <form method="get" 
                         class="row g-3" 
-                        onsubmit="adicionaFornecedor()"
-                        action="lista.html">
+                        onsubmit="listaFornecedor()"
+                        >
                             <div class="col-md-6">
                                 <label for="nome" class="form-label">Fornecedor</label>
                                 <input type="text" 
@@ -116,7 +116,8 @@
                                 placeholder="UF">
                             </div>       
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                <button type="submit" class="btn btn-primary">Atualizar</button>
+                                <button type="button" class="btn btn-warning" onclick="location.href='lista.html'">Cancelar</button>                                
                             </div> 
                         </form>
                     </section>
@@ -127,5 +128,4 @@
     </div>    
     <script src="../../back/cadastro/model/fornecedor.js"></script>
 </body>
-
 </html>
