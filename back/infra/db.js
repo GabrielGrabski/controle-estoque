@@ -10,7 +10,7 @@ class DB {
         '(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,'+
         'nome VARCHAR(200) NOT NULL,'+
         'cnpj VARCHAR(14) NOT NULL,'+
-        'telefone VARCHAR(13) NOT NULL,'+
+        'email VARCHAR(40) NOT NULL,'+
         'cep VARCHAR(8) NOT NULL,'+
         'rua VARCHAR (200) NOT NULL,'+
         'bairro VARCHAR(100) NOT NULL,'+ 
@@ -20,7 +20,7 @@ class DB {
             if(erro){
                 console.log(erro)
             }else{
-                console.log('Fornecedor gerado com sucesso!')
+                console.log('Vendedor gerado com sucesso!')
             }
         })       
     }  

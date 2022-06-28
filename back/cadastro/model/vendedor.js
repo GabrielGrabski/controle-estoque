@@ -1,26 +1,26 @@
 //const express = require('express');
 const conect = require('../../infra/conexao')
 
-class Fornecedor {
+class Vendedor {
 
-    insereFornecedor(fornecedor, res){
-        let sql = 'INSERT INTO fornecedor SET ?'        
-        conect.query(sql, fornecedor,(erro, resultado) => {
+    insereVendedor(vendedor, res){
+        let sql = 'INSERT INTO vendedor SET ?'        
+        conect.query(sql, vendedor,(erro, resultado) => {
             if(erro) {
                 res.status(400).json(resultado)
             }else{
                 res.status(200).json(resultado)
             }
         })
-        console.log(fornecedor.body)        
+        console.log(vendedor.body)        
     }
 
 
-    alterarFornecedor(fornecedor, res){
-        let sql = `UPDATE fornecedor SET nome = ?, cnpj = ?, telefone = ?, cep = ?,
+    alterarVendedor(vendedor, res){
+        let sql = `UPDATE vendedor SET nome = ?, cnpj = ?, email = ?, cep = ?,
         rua = ?, bairro = ?, cidade = ?, uf = ?  WHERE id = ?`
-        conect.query(sql,[fornecedor.nome, fornecedor.cnpj, fornecedor.telefone, fornecedor.cep, fornecedor.rua,
-            fornecedor.bairro, fornecedor.cidade, fornecedor.uf, fornecedor.id], (erro, resultado) => {
+        conect.query(sql,[vendedor.nome, vendedor.cnpj, vendedor.email, vendedor.cep, vendedor.rua,
+            vendedor.bairro, vendedor.cidade, vendedor.uf, vendedor.id], (erro, resultado) => {
             if(erro) {
                 res.status(400).json(resultado)
             }else{
@@ -29,8 +29,8 @@ class Fornecedor {
         })
     }
 
-    listaFornecedor(res){
-        const sql = 'SELECT * FROM fornecedor'
+    listaVendedor(res){
+        const sql = 'SELECT * FROM vendedor'
         conect.query(sql,(erro, resultado) => {
             if(erro) {
                 res.status(400).json(resultado)
@@ -40,8 +40,8 @@ class Fornecedor {
         })
     }
 
-    deletaFornecedor(id, res){
-        let sql = 'DELETE FROM fornecedor WHERE id = ?'
+    deletaVendedor(id, res){
+        let sql = 'DELETE FROM vendedor WHERE id = ?'
         conect.query(sql, id,(erro, resultado) => {
             if(erro) {
                 res.status(400).json(resultado)
@@ -66,12 +66,12 @@ function enviarForm(url, body){
     return requisicao.responseText
 }
 
-function cadastroFornecedor() {
+function cadastroVendedor() {
     event.preventDefault()
-    let url = "http://127.0.0.1:3000/fornecedor"
+    let url = "http://127.0.0.1:3000/vendedor"
     let nome = document.getElementById("nome").value
     let cnpj = document.getElementById("cnpj").value
-    let telefone = document.getElementById("telefone").value
+    let email = document.getElementById("email").value
     let cep = document.getElementById("cep").value
     let rua = document.getElementById("rua").value
     let bairro = document.getElementById("bairro").value
@@ -80,7 +80,7 @@ function cadastroFornecedor() {
 
     console.log(nome)
     console.log(cnpj)
-    console.log(telefone)
+    console.log(email)
     console.log(cep)
     console.log(rua)
     console.log(bairro)
@@ -90,7 +90,7 @@ function cadastroFornecedor() {
     body = {
         "nome": nome,
         "cnpj": cnpj,
-        "telefone": telefone,
+        "email": email,
         "cep": cep,
         "rua": rua,
         "bairro": bairro,
@@ -162,4 +162,4 @@ function pesquisacep(valor) {
 };
 
 
-module.exports = new Fornecedor
+module.exports = new Vendedor
