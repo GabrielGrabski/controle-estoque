@@ -16,7 +16,9 @@ module.exports = app => {
         categoria.deletaCategoria(req.body.id, res)
     })
 
-    app.put(rota, (req, res) =>{
-        categoria.alterarCategoria(req.body, res)
+    app.put((rota+'/:id'), (req, res) =>{
+        let id = parseInt(req.params.id)
+        let valores = req.body
+        categoria.alterarCategoria(id, valores, res)
     })
 }

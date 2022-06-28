@@ -12,9 +12,9 @@ class Categoria {
     });
   }
 
-  alterarCategoria(id, nome, res) {
+  alterarCategoria(id, valores, res) {
     let sql = "UPDATE categoria SET ? WHERE id = ?";
-    conexao.query(sql, [nome, id], (erro, resultado) => {
+    conexao.query(sql, [valores, id], (erro, resultado) => {
       if (erro) {
         res.status(400).json(resultado);
       } else {
