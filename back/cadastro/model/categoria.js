@@ -59,7 +59,7 @@ function enviarForm(url, body) {
 
 function cadastroCategoria() {
   event.preventDefault();
-  let url = "http://127.0.0.1:3000/vendedor";
+  let url = "http://127.0.0.1:3000/categoria";
   let categoria = document.getElementById("cadastro").value;
 
   console.log(categoria);
