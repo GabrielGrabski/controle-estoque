@@ -34,16 +34,41 @@ class Categoria {
     });
   }
 
-  deletarCategoria(id, res){
-    let sql = 'DELETE FROM categoria WHERE id = ?'
-    conect.query(sql, id,(erro, resultado) => {
-        if(erro) {
-            res.status(400).json(resultado)
-        }else{
-            res.status(200).json(resultado)
-        }
-    })
+  deletarCategoria(id, res) {
+    let sql = "DELETE FROM categoria WHERE id = ?";
+    conect.query(sql, id, (erro, resultado) => {
+      if (erro) {
+        res.status(400).json(resultado);
+      } else {
+        res.status(200).json(resultado);
+      }
+    });
+  }
 }
+
+function enviarForm(url, body) {
+  console.log("Body=", body);
+  let requisicao = new XMLHttpRequest();
+  console.log(url);
+  requisicao.open("post", url, true);
+  requisicao.setRequestHeader("Content-type", "application/json");
+  requisicao.send(JSON.stringify(body));
+
+  return requisicao.responseText;
+}
+
+function cadastroCategoria(event) {
+  event.preventDefault();
+  let url = "http://127.0.0.1:3000/vendedor";
+  let categoria = document.getElementById("cadastro").value;
+
+  console.log(categoria);
+
+  body = {
+    cadastro: cadastro,
+  };
+
+  enviarForm(url, body);
 }
 
 module.exports = new Categoria();
