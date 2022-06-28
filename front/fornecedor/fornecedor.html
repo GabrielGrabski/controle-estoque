@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
-    <title>Cadastro Fornecedor</title>
+    <link rel="icon" type="image/png" href="https://www.efacil.com.br/wcsstore/AuroraStorefrontAssetStore/Landing_Pages/quem-somos/icone-caminhao.png"/>
+        <title>Cadastro Fornecedor</title>
 </head>
 
 <body>
@@ -43,7 +44,19 @@
             </div>
             <div class="col-md-6 shadow p-3 mb-5 bg-body rounded border border-dark" style="margin-top: 10rem;">
                 <main class="conteudo">
-                    <h1 class="principal" style="margin-left: 5rem;">Cadastro de Fornecedor</h1>
+                    <div>
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/286/286112.png" 
+                            alt=""
+                            width="55"
+                            height="55"
+                            style="margin-left: 17rem;"
+                            > 
+                        </div>
+                        <div>
+                            <h1 class="principal" style="margin-left: 6rem;">Cadastro de Fornecedor</h1>
+                        </div>
+                    </div>  
                     <section class="formulario">
                         <form class="row g-3" onsubmit="cadastroFornecedor()" method="post"
                         >
@@ -52,7 +65,7 @@
                                 <input type="text" 
                                 class="form-control" 
                                 id="nome" 
-                                placeholder="Nome" 
+                                placeholder="Example LTDA" 
                                 maxlength="100"
                                 autofocus>
                             </div>
@@ -80,7 +93,7 @@
                                 size="10"
                                 maxlength="9" 
                                 onblur="pesquisacep(this.value);"
-                                placeholder="CEP">
+                                placeholder="00000-000">
                             </div>
                             <div class="mb-2">
                                 <label for="endereco" class="form-label"><strong>Endereco</strong></label>
@@ -115,7 +128,7 @@
                                 placeholder="UF">
                             </div>       
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary" onclick="location.href='lista.html'">Cadastrar</button>
+                                <button type="submit" class="btn btn-primary" onclick="location.href='lista.html'"><strong>Cadastrar</strong></button>
                             </div> 
                         </form>
                     </section>
