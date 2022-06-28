@@ -10,8 +10,6 @@ class Categoria {
         res.status(200).json(resultado);
       }
     });
-
-    res.redirect('editar-categoria');
   }
 
   alterarCategoria(id, nome, res) {
@@ -35,6 +33,17 @@ class Categoria {
       }
     });
   }
+
+  deletarCategoria(id, res){
+    let sql = 'DELETE FROM categoria WHERE id = ?'
+    conect.query(sql, id,(erro, resultado) => {
+        if(erro) {
+            res.status(400).json(resultado)
+        }else{
+            res.status(200).json(resultado)
+        }
+    })
+}
 }
 
 module.exports = new Categoria();
