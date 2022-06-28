@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <script src="../../back/cadastro/model/fornecedor.js"></script>
     <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #189bff">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"> <strong>KByte</strong></a>
@@ -44,10 +45,8 @@
                 <main class="conteudo">
                     <h1 class="principal">Cadastro de Fornecedor</h1>
                     <section class="formulario">
-                        <form method="get" 
-                        class="row g-3" 
-                        onsubmit="adicionaFornecedor()"
-                        action="lista.html">
+                        <form class="row g-3" onsubmit="cadastroFornecedor()" method="post"
+                        >
                             <div class="col-md-6">
                                 <label for="nome" class="form-label">Fornecedor</label>
                                 <input type="text" 
@@ -116,7 +115,7 @@
                                 placeholder="UF">
                             </div>       
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                <button type="submit" class="btn btn-primary" onclick="location.href='lista.html'">Cadastrar</button>
                             </div> 
                         </form>
                     </section>
@@ -124,8 +123,6 @@
             </div>
         </div>
     </div>
-    </div>    
-    <script src="../../back/cadastro/model/fornecedor.js"></script>
+    </div>        
 </body>
-
 </html>
