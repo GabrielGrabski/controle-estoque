@@ -9,6 +9,14 @@ module.exports = app => {
 
     app.post(rota, (req, res) => {
         console.log(req.body)
-        Fornecedor.adicionaFornecedor(req.body, res)
+        Fornecedor.insereFornecedor(req.body, res)
+    })
+
+    app.delete(rota, (req, res) => {
+        Fornecedor.deletaFornecedor(req.body.id, res)
+    })
+
+    app.put(rota, (req, res) =>{
+        Fornecedor.alterarFornecedor(req.body, res)
     })
 }

@@ -12,10 +12,10 @@ class DB {
         'cnpj VARCHAR(14) NOT NULL,'+
         'telefone VARCHAR(13) NOT NULL,'+
         'cep VARCHAR(8) NOT NULL,'+
-        'logradouro VARCHAR (200) NOT NULL,'+
+        'rua VARCHAR (200) NOT NULL,'+
         'bairro VARCHAR(100) NOT NULL,'+ 
         'cidade VARCHAR(100) NOT NULL,'+
-        'estado VARCHAR(2) NOT NULL)'   
+        'uf VARCHAR(2) NOT NULL)'   
         this.conexao.query(sql, erro => {
             if(erro){
                 console.log(erro)

@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    <script src="../../back/cadastro/model/fornecedor.js"></script>
     <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #189bff">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"> <strong>KByte</strong></a>
@@ -28,7 +27,7 @@
                         <a class="nav-link active" href="fornecedor.html">Fornecedor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Cliente</a>
+                        <a class="nav-link active" href="#">Vendedor</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Categoria</a>
@@ -45,7 +44,9 @@
                 <main class="conteudo">
                     <h1 class="principal">Cadastro de Fornecedor</h1>
                     <section class="formulario">
-                        <form class="row g-3" onsubmit="cadastroFornecedor()" method="post"
+                        <form method="get" 
+                        class="row g-3" 
+                        onsubmit="listaFornecedor()"
                         >
                             <div class="col-md-6">
                                 <label for="nome" class="form-label">Fornecedor</label>
@@ -115,7 +116,8 @@
                                 placeholder="UF">
                             </div>       
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary" onclick="location.href='lista.html'">Cadastrar</button>
+                                <button type="submit" class="btn btn-primary">Atualizar</button>
+                                <button type="button" class="btn btn-warning" onclick="location.href='lista.html'">Cancelar</button>                                
                             </div> 
                         </form>
                     </section>
@@ -123,6 +125,7 @@
             </div>
         </div>
     </div>
-    </div>        
+    </div>    
+    <script src="../../back/cadastro/model/fornecedor.js"></script>
 </body>
 </html>
