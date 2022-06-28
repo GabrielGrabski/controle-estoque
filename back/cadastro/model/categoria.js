@@ -23,7 +23,7 @@ class Categoria {
     });
   }
 
-  listarCategoria(res) {
+  listaCategoria(res) {
     const sql = "SELECT * FROM categoria";
     conexao.query(sql, (erro, resultado) => {
       if (erro) {
@@ -34,9 +34,9 @@ class Categoria {
     });
   }
 
-  deletarCategoria(id, res) {
+  deletaCategoria(id, res) {
     let sql = "DELETE FROM categoria WHERE id = ?";
-    conect.query(sql, id, (erro, resultado) => {
+    conexao.query(sql, id, (erro, resultado) => {
       if (erro) {
         res.status(400).json(resultado);
       } else {

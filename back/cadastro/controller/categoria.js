@@ -12,8 +12,8 @@ module.exports = app => {
         categoria.insereCategoria(req.body, res)
     })
 
-    app.delete(rota, (req, res) => {
-        categoria.deletaCategoria(req.body.id, res)
+    app.delete((rota+'/:id'), (req, res) => {
+        categoria.deletaCategoria(req.params.id, res)
     })
 
     app.put((rota+'/:id'), (req, res) =>{
