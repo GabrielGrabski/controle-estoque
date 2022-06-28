@@ -13,7 +13,7 @@ class DB {
             if(erro){
                 console.log(erro)
             }else{
-                console.log('Categoria cadastrada com sucesso!')
+                console.log('Categoria gerada com sucesso!')
             }
         })       
     }  
