@@ -1,7 +1,7 @@
 const conexao = require("../../infra/conexao");
 
 class Categoria {
-  adicionarCategoria(categoria, res) {
+  insereCategoria(categoria, res) {
     let sql = "INSERT INTO categoria SET ?";
     conexao.query(sql, categoria, (erro, resultado) => {
       if (erro) {
