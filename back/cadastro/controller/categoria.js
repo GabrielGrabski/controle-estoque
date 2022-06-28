@@ -4,19 +4,19 @@ const rota = '/categoria'
 
 module.exports = app => {
     app.get(rota, (req, res) => {
-        categoria.listacategoria(res)
+        categoria.listaCategoria(res)
     })
 
     app.post(rota, (req, res) => {
         console.log(req.body)
-        categoria.inserecategoria(req.body, res)
+        categoria.insereCategoria(req.body, res)
     })
 
     app.delete(rota, (req, res) => {
-        categoria.deletacategoria(req.body.id, res)
+        categoria.deletaCategoria(req.body.id, res)
     })
 
     app.put(rota, (req, res) =>{
-        categoria.alterarcategoria(req.body, res)
+        categoria.alterarCategoria(req.body, res)
     })
 }
