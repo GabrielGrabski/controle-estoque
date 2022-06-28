@@ -66,7 +66,7 @@ function enviarForm(url, body){
     return requisicao.responseText
 }
 
-function cadastroVendedor() {
+function cadastroVendedor(event) {
     event.preventDefault()
     let url = "http://127.0.0.1:3000/vendedor"
     let nome = document.getElementById("nome").value
